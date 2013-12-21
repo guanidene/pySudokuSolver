@@ -1,0 +1,84 @@
++=================================================================+
+|                      Sudoku Solver - 1.2                        |
++=================================================================+
+|                                                                 |
+|       +-------------------------------------------------+       |
+|       |     Author   : Pushpak Dagade                   |       |
+|       |     Date     : 20 July 2011                     |       |
+|       |     Email    : guanidene@gmail.com              |       |
+|       |     Blog     : http://guanidene.blogspot.com    |       |
+|       +-------------------------------------------------+       |
+|                                                                 |
++=================================================================+
+
+Project website - 
+http://guanidene.blogspot.com/2011/07/sudoku-solver-with-gui-written-in.html
+You can find much more detailed information about this project there.
+
+1. What is Sudoku Solver?
+   A small graphical utility for almost instantly solving any Sudoku puzzle.
+   It also shows the steps required to solve the same.
+
+2. Requirements?
+   a. Python 2.6 or 2.7 (also probably prior python 2.x versions)
+   b. wxPython 2.8
+
+3. How to run/install?
+   Simply run the module sudoku_solver.py in the terminal -
+   $ python sudoku_solver.py
+
+4. How to use the GUI?
+   a. You can fill up grid with any Sudoku puzzle you like by scrolling over
+      the cells.
+   b. Click the Solve button to solve the puzzle.
+   c. The solution will be displayed in the solution box and also 
+      stored in the file 'Solutions.txt'.
+   d. You can turn off the solution from the menu bar to make solving faster
+      (solution will still be saved in 'Solution.txt').
+
+   More information about this can be obtained from the application menu -
+   Help -> How To Use?
+
+5. Development Status?
+   Stable
+
+6. Platform?
+   Written in, for and tested on linux. 
+   However, should work on other platforms too.
+
+7. License?
+   BSD License. See the LICENSE file for details.
+
+8. Changelog?
+   See the CHANGELOG file for details.
+
+
+Background -
+--------------
+I started writing this as a fun tool for "myself", without any idea/plan for
+its distribution. Nothing was planned. Even the printing of solution was a
+part of my debugging. (I later realised that it could be made as a feature,
+to help users understand solving of Sudoku puzzles!)
+
+On the way to its completion, I have learnt a lot of new things, including and
+other than those related to programming. It was a lot of fun!
+
+Sudoku Solver versioning philosophy -
+---------------------------------------
+Sudoku Solver 1.x -
+Sudoku Solver 1.x versions will be pure python. 
+So they will be easier to understand, develop and/or extend.
+They will be 'almost instant' Sudoku solvers.
+New ideas will generally be first implemented here.
+
+Sudoku Solver 2.x   (to be released soon) -
+Sudoku Solver 2.x versions will have their 'logic' part implemented in C.
+So, Sudoku Solver 2.x versions will be much faster than their 1.x counterparts.
+So, they will be 'instant' Sudoku solvers.
+(Sudoku Solver 2.0's C part has been implemented and its
+solving time is less than 0.03 sec even for the toughest one,
+which is ~20x faster than this version.)
+Generally, 2.x versions will be implemented after their 1.x counterparts.
+
+Release of 2.x versions should not necessarily mean that the developement
+in the 1.x series will be stopped.

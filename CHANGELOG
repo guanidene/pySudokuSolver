@@ -1,0 +1,16 @@
+What's new in Sudoku Solver 1.2?
++ Menubar option to choose whether solution is required or not.
+  So, you can turn off the solution to make solving even faster.
++ Made improvements in the 'logic'. (1 change)
+  Also, implemented the same logic but using less resource consuming methods.
+  Puzzle solving is now around 3x faster (for the toughest one) when the
+  solution is turned off.
++ Improved the puzzle solution -
+  1. The solution is not as clumsy as before.
+  2. The solution is highly detailed now.
+     The solution also shows how the puzzle looks at intermediate steps. (NEW)
+     (solution of toughest puzzle is of 6200 lines, ~110 Kb, uncompressed.)
+
+What's new in Sudoku Solver 1.0?
++ Any sudoku puzzle, not matter how tough, can be solved almost instantly.
++ Solution is also provided for the same.
