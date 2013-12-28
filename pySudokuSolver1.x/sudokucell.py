@@ -74,24 +74,26 @@ class SudokuCell(QtGui.QLabel):
         # it even if you change  SudokuCell.Labels which you will have to
         # change in the later case.
 
-        self.posx = NotImplementedError("You need to call SudokuCell.initialize method first")
-        self.posy = NotImplementedError("You need to call SudokuCell.initialize method first")
+    def savePosition(self):
+        """Get the x and y positions of the cell w.r.t the entire grid"""
+        # Created a separate method for this task, since objectName is not
+        # availabe during initialization of the QLabel
 
-    def initialize(self):
         # assuming name of SudokuCell class instances is of format label_x_y
         # where, x=row index of SudokuCell &
         #        y=col index of SudokuCell
-
-        # XXX. objectName contains empty string "";
-        # XXX. search on net for its solution
-        print self.objectName(), type(self.objectName()), 'str: ' , self.objectName()
         self.posx = int(self.objectName()[-3])
         self.posy = int(self.objectName()[-1])
-        print 'This should return true; self.isEmpty:', self.isEmpty()
+
+        # Note:
+        # The following could be a more better way to do the above task:
+        # One can get the position of a wiget in its parent layout; this can be
+        # used to directly get the x and y positions; This will help avoid
+        # setting objectNames for every label individually.
 
     def isEmpty(self):
         """Return 1 if label is '' (empty string) else return 0."""
-        return self.text() is ''
+        return self.text() == ''
 
     def isFilled(self):
         """Return not self.isEmpty()."""

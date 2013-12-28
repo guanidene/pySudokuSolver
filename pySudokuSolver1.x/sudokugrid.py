@@ -1,46 +1,46 @@
 # sudokupanel.py    [Sudoku Solver 1.2]
 # -*- coding: UTF-8 -*-
 
-"""This is a very important module contributing to both gui and logic.
-The method setSudokuCellLabel of the class SudkouPanel is the most
-important (and the most difficult to understand) method of this module."""
+"""
+This is a very important module contributing to both gui and logic.
+The method setSudokuCellLabel of the class SudokuGrid is the most
+important (and the most difficult to understand) method of this module.
+"""
 
-__author__ = "Pushpak Dagade (पुष्पक दगड़े)"
+__author__ = "पुष्पक दगड़े (Pushpak Dagade)"
 
+from PyQt4 import QtGui
 from sudokucell import SudokuCell
 
 
-class SudokuPanel(wx.Panel):
+class SudokuGrid(QtGui.QWidget):
     """Instance of this class which act as container for
     all instances of the class SudokuCell."""
 
-    def __init__(self, parent):
-        super(self.__class__, self).__init__(parent, -1)
+    def popululateSudokucells(self):
+        # Let every sudokucell know its position w.r.t. the entire grid
+        for sudokucell in self.findChildren(SudokuCell):
+            sudokucell.savePosition()
 
-        # Create children widgets.
-        self.sudokucells = tuple([ [SudokuCell(self, cellx, celly)
-          for celly in xrange(9)] for cellx in xrange(9) ])
-
-        sizer = wx.GridSizer(9,9)
-        for sudokucell in self: sizer.Add(sudokucell, flag=wx.SHAPED)
-        self.SetSizer(sizer)
-        sizer.Fit(self)
-
-        # Set appearance.
-        self.SetAppearance()
-
-    def __iter__(self):
-        return (sudokucell for cellrow in self.sudokucells
-                           for sudokucell in cellrow)
+        # need to arrange sudokucells in a 2d tuple, such that their indexes
+        # match their (posx, posy) tuple
+        all_sudokucells = sorted(self.findChildren(SudokuCell),
+            key=lambda sudokucell: (sudokucell.posx, sudokucell.posy))
+        self.sudokucells = tuple([all_sudokucells[x:x + 9]
+                                 for x in xrange(0, len(all_sudokucells), 9)])
 
     # fixed
+    def __iter__(self):
+        return (sudokucell for cellrow in self.sudokucells
+                for sudokucell in cellrow)
+
     def isGridEmpty(self):
         """Return 1 if grid is empty else return 0."""
         for sudokucell in self:
-            if not sudokucell.isEmpty(): return 0
+            if not sudokucell.isEmpty():
+                return 0
         return 1
 
-    # fixed
     def isPuzzleComplete(self):
         """Return 1 if puzzle is complete and 0 if not complete.
 
@@ -50,10 +50,10 @@ class SudokuPanel(wx.Panel):
 
         """
         for sudokucell in self:
-            if sudokucell.isEmpty(): return 0
+            if sudokucell.isEmpty():
+                return 0
         return 1
 
-    # fixed
     def isPuzzleCorrect(self):
         """Return 0 if puzzle is (definately) incorrect else return 1.
 
@@ -144,8 +144,8 @@ class SudokuPanel(wx.Panel):
         # indices of required sudokucells.
         posx = sudokucell.posx
         posy = sudokucell.posy
-        row_list = [posx/3*3+0, posx/3*3+1, posx/3*3+2]   # posx/3 is integer
-        col_list = [posy/3*3+0, posy/3*3+1, posy/3*3+2]   # posy/3 is integer
+        row_list = [posx / 3 * 3 + 0, posx / 3 * 3 + 1, posx / 3 * 3 + 2]
+        col_list = [posy / 3 * 3 + 0, posy / 3 * 3 + 1, posy / 3 * 3 + 2]
         sudokucells = []
         for row in row_list:
             for col in col_list:
@@ -218,14 +218,15 @@ class SudokuPanel(wx.Panel):
 
         current_label = sudokucell.text()
         label = str(label).strip()
-        if label == current_label: return 1
+        if label == current_label:
+            return 1
 
         if label in sudokucell.LabelRestrictionsCount and \
           sudokucell.LabelRestrictionsCount[label] == 0:
 
             sudokucells_list = self.getSudokuCellsInRow(sudokucell) + \
-                               self.getSudokuCellsInCol(sudokucell) + \
-                               self.getSudokuCellsInBox(sudokucell)
+                self.getSudokuCellsInCol(sudokucell) + \
+                self.getSudokuCellsInBox(sudokucell)
 
             # Decrease the current_label count by 1 from all the cells
             # in its row,col and box (except if label is '')
@@ -239,11 +240,11 @@ class SudokuPanel(wx.Panel):
                 for _sudokucell in sudokucells_list:
                     _sudokucell.LabelRestrictionsCount[label] += 1
 
-            sudokucell.SetLabel(label)
+            sudokucell.setText(label)
             return 1                # success
 
         else:
             # Don't raise an exception, just print the error.
             print '[Trouble] Failed setting label-\n %s in cell (%d,%d)' \
-              %(label, sudokucell.posx+1, sudokucell.posy+1)
+                  % (label, sudokucell.posx + 1, sudokucell.posy + 1)
             return 0                # failure
