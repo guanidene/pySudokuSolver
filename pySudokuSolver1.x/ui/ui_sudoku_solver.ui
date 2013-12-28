@@ -28,55 +28,10 @@
         <property name="spacing">
          <number>0</number>
         </property>
-        <item row="2" column="2">
-         <widget class="QLabel" name="label_28">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="sizeIncrement">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-            <stylestrategy>PreferAntialias</stylestrategy>
-           </font>
-          </property>
-          <property name="autoFillBackground">
-           <bool>false</bool>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::Panel</enum>
-          </property>
-          <property name="text">
-           <string>0</string>
-          </property>
-          <property name="textFormat">
-           <enum>Qt::PlainText</enum>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="textInteractionFlags">
-           <set>Qt::NoTextInteraction</set>
-          </property>
-         </widget>
-        </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="label_22">
+         <widget class="SudokuCell" name="label_1_4">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -90,8 +45,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -105,7 +60,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -119,9 +74,9 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel" name="label_24">
+         <widget class="SudokuCell" name="label_1_3">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -135,8 +90,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -150,7 +105,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -164,9 +119,9 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLabel" name="label_23">
+         <widget class="SudokuCell" name="label_0_4">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -180,8 +135,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -198,7 +153,7 @@
            <enum>QFrame::Plain</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -212,9 +167,9 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QLabel" name="label_21">
+         <widget class="SudokuCell" name="label_2_3">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -228,8 +183,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -243,7 +198,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -257,9 +212,9 @@
          </widget>
         </item>
         <item row="1" column="2">
-         <widget class="QLabel" name="label_27">
+         <widget class="SudokuCell" name="label_1_5">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -273,8 +228,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -288,7 +243,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -302,9 +257,9 @@
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QLabel" name="label_26">
+         <widget class="SudokuCell" name="label_0_5">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -318,8 +273,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -333,7 +288,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -347,9 +302,9 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLabel" name="label_25">
+         <widget class="SudokuCell" name="label_2_4">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -363,8 +318,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -378,7 +333,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -392,9 +347,9 @@
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QLabel" name="label_20">
+         <widget class="SudokuCell" name="label_0_3">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -408,8 +363,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -426,13 +381,58 @@
            <number>1</number>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
           </property>
           <property name="scaledContents">
            <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::NoTextInteraction</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="SudokuCell" name="label_2_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>24</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::PlainText</enum>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -450,9 +450,9 @@
          <number>0</number>
         </property>
         <item row="1" column="2">
-         <widget class="QLabel" name="label_45">
+         <widget class="SudokuCell" name="label_1_8">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -466,8 +466,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -481,7 +481,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -495,9 +495,9 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLabel" name="label_41">
+         <widget class="SudokuCell" name="label_0_7">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -511,8 +511,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -529,7 +529,7 @@
            <enum>QFrame::Plain</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -543,9 +543,9 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="label_40">
+         <widget class="SudokuCell" name="label_1_7">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -559,8 +559,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -574,7 +574,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -588,9 +588,9 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QLabel" name="label_39">
+         <widget class="SudokuCell" name="label_2_6">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -604,8 +604,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -619,7 +619,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -633,9 +633,9 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLabel" name="label_43">
+         <widget class="SudokuCell" name="label_2_7">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -649,8 +649,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -664,7 +664,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -678,9 +678,9 @@
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QLabel" name="label_44">
+         <widget class="SudokuCell" name="label_0_8">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -694,8 +694,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -709,7 +709,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -723,9 +723,9 @@
          </widget>
         </item>
         <item row="2" column="2">
-         <widget class="QLabel" name="label_46">
+         <widget class="SudokuCell" name="label_2_8">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -739,8 +739,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -754,7 +754,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -768,9 +768,9 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel" name="label_42">
+         <widget class="SudokuCell" name="label_1_6">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -784,8 +784,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -799,7 +799,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -813,9 +813,9 @@
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QLabel" name="label_38">
+         <widget class="SudokuCell" name="label_0_6">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -829,8 +829,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -847,7 +847,7 @@
            <number>1</number>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -871,9 +871,9 @@
          <number>0</number>
         </property>
         <item row="0" column="1">
-         <widget class="QLabel" name="label_95">
+         <widget class="SudokuCell" name="label_3_7">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -887,8 +887,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -905,7 +905,7 @@
            <enum>QFrame::Plain</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -919,9 +919,9 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel" name="label_96">
+         <widget class="SudokuCell" name="label_4_6">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -935,8 +935,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -950,7 +950,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -964,9 +964,9 @@
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QLabel" name="label_92">
+         <widget class="SudokuCell" name="label_3_6">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -980,8 +980,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -998,7 +998,7 @@
            <number>1</number>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1015,9 +1015,9 @@
          </widget>
         </item>
         <item row="1" column="2">
-         <widget class="QLabel" name="label_99">
+         <widget class="SudokuCell" name="label_4_8">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1031,8 +1031,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1046,7 +1046,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1060,9 +1060,9 @@
          </widget>
         </item>
         <item row="2" column="2">
-         <widget class="QLabel" name="label_100">
+         <widget class="SudokuCell" name="label_5_8">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1076,8 +1076,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1091,7 +1091,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1105,9 +1105,9 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLabel" name="label_97">
+         <widget class="SudokuCell" name="label_5_7">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1121,8 +1121,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1136,7 +1136,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1150,9 +1150,9 @@
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QLabel" name="label_98">
+         <widget class="SudokuCell" name="label_3_8">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1166,8 +1166,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1181,7 +1181,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1195,9 +1195,9 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QLabel" name="label_93">
+         <widget class="SudokuCell" name="label_5_6">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1211,8 +1211,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1226,7 +1226,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1240,9 +1240,9 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="label_94">
+         <widget class="SudokuCell" name="label_4_7">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1256,8 +1256,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1271,7 +1271,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1292,9 +1292,9 @@
          <number>0</number>
         </property>
         <item row="0" column="0">
-         <widget class="QLabel" name="label_11">
+         <widget class="SudokuCell" name="label_0_0">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1308,8 +1308,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1326,7 +1326,7 @@
            <number>1</number>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1343,9 +1343,9 @@
          </widget>
         </item>
         <item row="2" column="2">
-         <widget class="QLabel" name="label_19">
+         <widget class="SudokuCell" name="label_2_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1359,8 +1359,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1374,52 +1374,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
-          </property>
-          <property name="textFormat">
-           <enum>Qt::PlainText</enum>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="textInteractionFlags">
-           <set>Qt::NoTextInteraction</set>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLabel" name="label_16">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="sizeIncrement">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-            <stylestrategy>PreferAntialias</stylestrategy>
-           </font>
-          </property>
-          <property name="autoFillBackground">
-           <bool>false</bool>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(229, 235, 222);</string>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::Panel</enum>
-          </property>
-          <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1433,9 +1388,9 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel" name="label_15">
+         <widget class="SudokuCell" name="label_1_0">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1449,8 +1404,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1464,7 +1419,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1478,9 +1433,9 @@
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QLabel" name="label_17">
+         <widget class="SudokuCell" name="label_0_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1494,8 +1449,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1509,7 +1464,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1523,9 +1478,9 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="label_13">
+         <widget class="SudokuCell" name="label_1_1">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1539,8 +1494,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1554,7 +1509,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1568,9 +1523,9 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLabel" name="label_14">
+         <widget class="SudokuCell" name="label_0_1">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1584,8 +1539,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1602,7 +1557,7 @@
            <enum>QFrame::Plain</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1616,9 +1571,9 @@
          </widget>
         </item>
         <item row="1" column="2">
-         <widget class="QLabel" name="label_18">
+         <widget class="SudokuCell" name="label_1_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1632,8 +1587,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1647,7 +1602,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1661,9 +1616,9 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QLabel" name="label_12">
+         <widget class="SudokuCell" name="label_2_0">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1677,8 +1632,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1692,7 +1647,52 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::PlainText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::NoTextInteraction</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="SudokuCell" name="label_2_1">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>24</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(229, 235, 222);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="text">
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1713,9 +1713,9 @@
          <number>0</number>
         </property>
         <item row="0" column="2">
-         <widget class="QLabel" name="label_71">
+         <widget class="SudokuCell" name="label_3_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1729,8 +1729,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1744,52 +1744,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
-          </property>
-          <property name="textFormat">
-           <enum>Qt::PlainText</enum>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="textInteractionFlags">
-           <set>Qt::NoTextInteraction</set>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_66">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="sizeIncrement">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-            <stylestrategy>PreferAntialias</stylestrategy>
-           </font>
-          </property>
-          <property name="autoFillBackground">
-           <bool>false</bool>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::Panel</enum>
-          </property>
-          <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1803,9 +1758,9 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="label_67">
+         <widget class="SudokuCell" name="label_4_1">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1819,8 +1774,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1834,7 +1789,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1848,9 +1803,9 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel" name="label_69">
+         <widget class="SudokuCell" name="label_4_0">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1864,8 +1819,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1879,7 +1834,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1893,9 +1848,9 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLabel" name="label_70">
+         <widget class="SudokuCell" name="label_5_1">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1909,8 +1864,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1924,7 +1879,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1938,9 +1893,9 @@
          </widget>
         </item>
         <item row="1" column="2">
-         <widget class="QLabel" name="label_72">
+         <widget class="SudokuCell" name="label_4_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1954,8 +1909,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1969,7 +1924,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -1983,9 +1938,9 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLabel" name="label_68">
+         <widget class="SudokuCell" name="label_3_1">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1999,8 +1954,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2017,7 +1972,7 @@
            <enum>QFrame::Plain</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2031,9 +1986,9 @@
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QLabel" name="label_65">
+         <widget class="SudokuCell" name="label_3_0">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2047,8 +2002,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2065,7 +2020,7 @@
            <number>1</number>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2082,9 +2037,9 @@
          </widget>
         </item>
         <item row="2" column="2">
-         <widget class="QLabel" name="label_73">
+         <widget class="SudokuCell" name="label_5_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2098,8 +2053,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2113,7 +2068,52 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::PlainText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::NoTextInteraction</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="SudokuCell" name="label_5_0">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>24</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="text">
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2134,9 +2134,9 @@
          <number>0</number>
         </property>
         <item row="0" column="0">
-         <widget class="QLabel" name="label_56">
+         <widget class="SudokuCell" name="label_3_3">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2150,8 +2150,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2168,7 +2168,7 @@
            <number>1</number>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2185,9 +2185,9 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QLabel" name="label_57">
+         <widget class="SudokuCell" name="label_5_3">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2201,8 +2201,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2216,7 +2216,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2230,9 +2230,9 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="label_58">
+         <widget class="SudokuCell" name="label_4_4">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2246,8 +2246,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2261,7 +2261,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2275,9 +2275,9 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel" name="label_60">
+         <widget class="SudokuCell" name="label_4_3">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2291,8 +2291,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2306,7 +2306,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2320,9 +2320,9 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLabel" name="label_61">
+         <widget class="SudokuCell" name="label_5_4">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2336,8 +2336,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2351,7 +2351,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2365,9 +2365,9 @@
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QLabel" name="label_62">
+         <widget class="SudokuCell" name="label_3_5">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2381,8 +2381,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2396,7 +2396,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2410,9 +2410,9 @@
          </widget>
         </item>
         <item row="1" column="2">
-         <widget class="QLabel" name="label_63">
+         <widget class="SudokuCell" name="label_4_5">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2426,8 +2426,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2441,7 +2441,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2455,9 +2455,9 @@
          </widget>
         </item>
         <item row="2" column="2">
-         <widget class="QLabel" name="label_64">
+         <widget class="SudokuCell" name="label_5_5">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2471,8 +2471,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2486,7 +2486,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2500,9 +2500,9 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLabel" name="label_59">
+         <widget class="SudokuCell" name="label_3_4">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2516,8 +2516,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2534,7 +2534,7 @@
            <enum>QFrame::Plain</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2555,9 +2555,9 @@
          <number>0</number>
         </property>
         <item row="0" column="2">
-         <widget class="QLabel" name="label_80">
+         <widget class="SudokuCell" name="label_6_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2571,8 +2571,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2586,7 +2586,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2600,9 +2600,9 @@
          </widget>
         </item>
         <item row="1" column="2">
-         <widget class="QLabel" name="label_81">
+         <widget class="SudokuCell" name="label_7_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2616,8 +2616,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2631,7 +2631,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2645,9 +2645,9 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="label_76">
+         <widget class="SudokuCell" name="label_7_1">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2661,8 +2661,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2676,7 +2676,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2690,9 +2690,9 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel" name="label_78">
+         <widget class="SudokuCell" name="label_7_0">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2706,8 +2706,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2721,7 +2721,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2735,9 +2735,9 @@
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QLabel" name="label_74">
+         <widget class="SudokuCell" name="label_6_0">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2751,8 +2751,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2769,7 +2769,7 @@
            <number>1</number>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2786,9 +2786,9 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QLabel" name="label_75">
+         <widget class="SudokuCell" name="label_8_0">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2802,8 +2802,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2817,7 +2817,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2831,9 +2831,9 @@
          </widget>
         </item>
         <item row="2" column="2">
-         <widget class="QLabel" name="label_82">
+         <widget class="SudokuCell" name="label_8_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2847,8 +2847,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2862,7 +2862,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2876,9 +2876,9 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLabel" name="label_79">
+         <widget class="SudokuCell" name="label_8_1">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2892,8 +2892,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2907,7 +2907,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2921,9 +2921,9 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLabel" name="label_77">
+         <widget class="SudokuCell" name="label_6_1">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2937,8 +2937,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -2955,7 +2955,7 @@
            <enum>QFrame::Plain</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -2976,9 +2976,9 @@
          <number>0</number>
         </property>
         <item row="0" column="0">
-         <widget class="QLabel" name="label_29">
+         <widget class="SudokuCell" name="label_6_3">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2992,8 +2992,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3010,7 +3010,7 @@
            <number>1</number>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3027,9 +3027,9 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QLabel" name="label_30">
+         <widget class="SudokuCell" name="label_8_3">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -3043,8 +3043,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3058,7 +3058,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3072,9 +3072,9 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="label_31">
+         <widget class="SudokuCell" name="label_7_4">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -3088,8 +3088,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3103,7 +3103,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3117,9 +3117,9 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLabel" name="label_32">
+         <widget class="SudokuCell" name="label_6_4">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -3133,8 +3133,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3151,7 +3151,7 @@
            <enum>QFrame::Plain</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3165,9 +3165,9 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel" name="label_33">
+         <widget class="SudokuCell" name="label_7_3">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -3181,8 +3181,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3196,7 +3196,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3210,9 +3210,9 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLabel" name="label_34">
+         <widget class="SudokuCell" name="label_8_4">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -3226,8 +3226,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3241,7 +3241,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3255,9 +3255,9 @@
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QLabel" name="label_35">
+         <widget class="SudokuCell" name="label_6_5">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -3271,8 +3271,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3286,7 +3286,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3300,9 +3300,9 @@
          </widget>
         </item>
         <item row="1" column="2">
-         <widget class="QLabel" name="label_36">
+         <widget class="SudokuCell" name="label_7_5">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -3316,8 +3316,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3331,7 +3331,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3345,9 +3345,9 @@
          </widget>
         </item>
         <item row="2" column="2">
-         <widget class="QLabel" name="label_37">
+         <widget class="SudokuCell" name="label_8_5">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -3361,8 +3361,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3376,7 +3376,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3397,9 +3397,9 @@
          <number>0</number>
         </property>
         <item row="1" column="0">
-         <widget class="QLabel" name="label_87">
+         <widget class="SudokuCell" name="label_7_6">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>1</verstretch>
            </sizepolicy>
@@ -3413,8 +3413,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3428,7 +3428,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3442,9 +3442,9 @@
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QLabel" name="label_89">
+         <widget class="SudokuCell" name="label_6_8">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>1</verstretch>
            </sizepolicy>
@@ -3458,8 +3458,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3473,7 +3473,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string>9</string>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3487,9 +3487,9 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QLabel" name="label_84">
+         <widget class="SudokuCell" name="label_8_6">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>1</verstretch>
            </sizepolicy>
@@ -3503,8 +3503,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3518,7 +3518,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3532,9 +3532,9 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="label_85">
+         <widget class="SudokuCell" name="label_7_7">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>1</verstretch>
            </sizepolicy>
@@ -3548,8 +3548,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3563,7 +3563,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3577,9 +3577,9 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLabel" name="label_88">
+         <widget class="SudokuCell" name="label_8_7">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>1</verstretch>
            </sizepolicy>
@@ -3593,8 +3593,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3608,7 +3608,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3622,9 +3622,9 @@
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QLabel" name="label_83">
+         <widget class="SudokuCell" name="label_6_6">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>1</verstretch>
            </sizepolicy>
@@ -3638,8 +3638,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3656,7 +3656,7 @@
            <number>1</number>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3673,9 +3673,9 @@
          </widget>
         </item>
         <item row="1" column="2">
-         <widget class="QLabel" name="label_90">
+         <widget class="SudokuCell" name="label_7_8">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>1</verstretch>
            </sizepolicy>
@@ -3689,8 +3689,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3704,7 +3704,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3718,9 +3718,9 @@
          </widget>
         </item>
         <item row="2" column="2">
-         <widget class="QLabel" name="label_91">
+         <widget class="SudokuCell" name="label_8_8">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>1</verstretch>
            </sizepolicy>
@@ -3734,8 +3734,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3749,7 +3749,7 @@
            <enum>QFrame::Panel</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3763,9 +3763,9 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLabel" name="label_86">
+         <widget class="SudokuCell" name="label_6_7">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
             <verstretch>1</verstretch>
            </sizepolicy>
@@ -3779,8 +3779,8 @@
           <property name="font">
            <font>
             <pointsize>24</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -3797,7 +3797,7 @@
            <enum>QFrame::Plain</enum>
           </property>
           <property name="text">
-           <string>0</string>
+           <string/>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -3860,15 +3860,15 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="2">
+      <item row="0" column="2" colspan="2">
+       <widget class="QTextBrowser" name="textBrowser"/>
+      </item>
+      <item row="2" column="2" colspan="2">
        <widget class="Line" name="line">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
-      </item>
-      <item row="0" column="2" colspan="2">
-       <widget class="QTextBrowser" name="textBrowser"/>
       </item>
      </layout>
     </item>
@@ -3962,6 +3962,9 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Show solution</string>
    </property>
@@ -3970,6 +3973,13 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SudokuCell</class>
+   <extends>QLabel</extends>
+   <header location="global">sudokucell</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>pushButton_5</tabstop>
   <tabstop>pushButton_4</tabstop>
