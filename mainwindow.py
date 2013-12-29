@@ -10,7 +10,7 @@ Sudoku Solver main window
 import sys
 from time import time
 from textwrap import dedent
-from PyQt4 import QtGui
+from PyQt4 import QtCore, QtGui
 from logic import SolveSudokuPuzzle
 from ui_sudoku_solver import Ui_MainWindow, _fromUtf8
 
@@ -25,6 +25,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         # Setup the GUI created using QtDesigner
         super(MainWindow, self).__init__(None)
         self.setupUi(self)
+        self.setMinimumSize(600, 400)
 
         # set window icon
         self.icon = QtGui.QIcon()
@@ -52,6 +53,19 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.txtbrwSolutionbox.write = self.txtbrwSolutionbox.append
         sys.stdout = self.txtbrwSolutionbox
         sys.stderr = self.txtbrwSolutionbox
+
+    def resizeEvent(self, evt):
+        """
+        Keep mainwindow.mainGridLayout centered as a square with maximum size
+        within SudokuGrid
+        """
+        newlength_sudokugrid = min(self.widget.width(),
+                                   self.widget.height())
+        topleft_x = (self.widget.width() - newlength_sudokugrid) / 2
+        topleft_y = (self.widget.height() - newlength_sudokugrid) / 2
+        self.sudokugrid.setGeometry(QtCore.QRect(topleft_x, topleft_y,
+                                                 newlength_sudokugrid,
+                                                 newlength_sudokugrid))
 
     def showSolution(self):
         if self.actionShowSolution.isChecked():

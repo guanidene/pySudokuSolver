@@ -13,7 +13,7 @@ from PyQt4 import QtGui
 from sudokucell import SudokuCell
 
 
-class SudokuGrid(QtGui.QWidget):
+class SudokuGrid(QtGui.QFrame):
     """Instance of this class which act as container for
     all instances of the class SudokuCell."""
 
