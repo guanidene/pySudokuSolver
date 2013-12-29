@@ -14,11 +14,11 @@
 #+=================================================================+
 
 """
-A small graphical application for solving any Sudoku puzzle,
-almost instantaneously.
+A small graphical application for solving any Sudoku puzzle, almost
+instantaneously.
 """
 
-# avoid QString classes altogether
+# avoid QString class altogether
 import sip
 sip.setapi("QString", 2)
 from PyQt4 import QtGui

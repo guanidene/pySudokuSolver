@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
-     <widget class="SudokuGrid" name="SudokuGrid" native="true">
+     <widget class="SudokuGrid" name="sudokugrid" native="true">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -3829,42 +3829,51 @@
     <item>
      <layout class="QGridLayout" name="gridLayout_10">
       <item row="2" column="2">
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="btnClear">
         <property name="statusTip">
-         <string>Save current state of the numbers in the grid. You can revert back to the saved state using the &quot;Load Grid State&quot; button</string>
+         <string>Clear all the cells in the grid so that you can start a fresh puzzle (Ctrl + C)</string>
         </property>
         <property name="text">
-         <string>&amp;Save Grid State</string>
+         <string>&amp;Clear</string>
         </property>
        </widget>
       </item>
       <item row="2" column="3">
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="btnSolve">
         <property name="statusTip">
-         <string>Load a previously saved state into the grid</string>
+         <string>Solve the Sudoku Puzzle (Ctrl + l)</string>
         </property>
         <property name="text">
-         <string>&amp;Load Grid State</string>
+         <string>So&amp;lve</string>
         </property>
        </widget>
       </item>
       <item row="0" column="2" colspan="2">
-       <widget class="QTextBrowser" name="textBrowser"/>
+       <widget class="QTextBrowser" name="txtbrwSolutionbox">
+        <property name="font">
+         <font>
+          <family>DejaVu Sans Mono</family>
+         </font>
+        </property>
+       </widget>
       </item>
       <item row="1" column="3">
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="btnRevert">
         <property name="statusTip">
-         <string>Clear all the cells in the grid so that you can start a fresh puzzle</string>
+         <string>Load a previously saved state into the grid (Ctrl + R)</string>
         </property>
         <property name="text">
-         <string>&amp;Clear Grid</string>
+         <string>&amp;Revert</string>
         </property>
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="btnSave">
+        <property name="statusTip">
+         <string>Save current state of the numbers in the grid. You can revert back to the saved state using the &quot;Load Grid State&quot; button (Ctrl + S)</string>
+        </property>
         <property name="text">
-         <string>Solve Fully</string>
+         <string>&amp;Save</string>
         </property>
        </widget>
       </item>
@@ -3881,35 +3890,35 @@
      <height>26</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menu_File">
+   <widget class="QMenu" name="menuFile">
     <property name="title">
      <string>&amp;File</string>
     </property>
     <addaction name="actionExit"/>
    </widget>
-   <widget class="QMenu" name="menu_View">
+   <widget class="QMenu" name="menuView">
     <property name="title">
      <string>&amp;View</string>
     </property>
     <addaction name="actionFullscreen"/>
    </widget>
-   <widget class="QMenu" name="menu_Help">
+   <widget class="QMenu" name="menuHelp">
     <property name="title">
      <string>&amp;Help</string>
     </property>
     <addaction name="actionHowToUse"/>
     <addaction name="actionAbout"/>
    </widget>
-   <widget class="QMenu" name="menu_Solution">
+   <widget class="QMenu" name="menuSolution">
     <property name="title">
      <string>&amp;Solution</string>
     </property>
     <addaction name="actionShowSolution"/>
    </widget>
-   <addaction name="menu_File"/>
-   <addaction name="menu_Solution"/>
-   <addaction name="menu_View"/>
-   <addaction name="menu_Help"/>
+   <addaction name="menuFile"/>
+   <addaction name="menuSolution"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionExit">
@@ -3984,6 +3993,13 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>btnSave</tabstop>
+  <tabstop>btnRevert</tabstop>
+  <tabstop>btnClear</tabstop>
+  <tabstop>btnSolve</tabstop>
+  <tabstop>txtbrwSolutionbox</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
