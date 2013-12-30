@@ -1,21 +1,17 @@
-#!/usr/bin/python -u
 # -*- coding: utf-8 -*-
 
-__author__ = "पुष्पक दगड़े (Pushpak Dagade)"
-
 """
-Sudoku Solver main window
+pySudokuSolver main window of GUI
 """
 
 import sys
 from time import time
-from textwrap import dedent
 from PyQt4 import QtCore, QtGui
 from logic import SolveSudokuPuzzle
 from ui_sudoku_solver import Ui_MainWindow, _fromUtf8
 
-__author__ = "पुष्पक दगड़े (Pushpak Dagade)"
-__version__ = '1.x'
+__author__ = u"पुष्पक दगड़े (Pushpak Dagade)"
+__version__ = '1.3'
 
 
 class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
@@ -33,8 +29,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
                             QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.setWindowIcon(self.icon)
 
-        # connect singal to slots
-        self.actionShowSolution.triggered.connect(self.showSolution)
+        # connect singals to slots
         self.actionFullscreen.triggered.connect(self.viewFullscreen)
         self.actionAbout.triggered.connect(self.helpAbout)
         self.actionHowToUse.triggered.connect(self.helpHowToUse)
@@ -42,6 +37,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.btnRevert.clicked.connect(self.onRevert)
         self.btnSave.clicked.connect(self.onSave)
         self.btnSolve.clicked.connect(self.onSolve)
+        self.restoreSettings()
 
         ## non GUI related code
         self.savedPuzzle = None
@@ -49,29 +45,68 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.sudokugrid.popululateSudokucells()
         self.LoadPuzzle()
 
-        # redirect all stdout and stderr to txtbrwSolutionbox
-        self.txtbrwSolutionbox.write = self.txtbrwSolutionbox.append
-        sys.stdout = self.txtbrwSolutionbox
-        sys.stderr = self.txtbrwSolutionbox
+        ## Save some fixed dimensions for quicker computation in the
+        ## resizeEvent method
+        # 1. self.centralwidget's layoutRightMargin + layoutSpacing +
+        #                         layoutLeftMargin,
+        self.margin_horizontal = 9 + 6 + 9
+        # 2. self.centrakwidget's layoutTopMargin + layoutBottomMargin
+        self.margin_vertical = 9 + 9
+        # 3. gridLayoutSidePanel's fixed width
+        self.width_sidepanel = self.gridLayoutSidePanel.minimumSize().width()
 
-    def resizeEvent(self, evt):
+        # redirect all stdout and stderr to txtbrwSolutionbox
+#        self.txtbrwSolutionbox.write = self.txtbrwSolutionbox.append
+#        sys.stdout = self.txtbrwSolutionbox
+#        sys.stderr = self.txtbrwSolutionbox
+
+    def resizeEvent(self, event):
         """
-        Keep mainwindow.mainGridLayout centered as a square with maximum size
-        within SudokuGrid
+        Keep mainwindow.sudokugrid centered as a square (with maximum size)
+        within self.widget
         """
-        newlength_sudokugrid = min(self.widget.width(),
-                                   self.widget.height())
-        topleft_x = (self.widget.width() - newlength_sudokugrid) / 2
-        topleft_y = (self.widget.height() - newlength_sudokugrid) / 2
+        # Keep in mind a practical problem - When the app starts, "self.widget"
+        # is still small in size as it has not expanded yet to fill the space
+        # within MainWindow. So cannot use "self.widget"'s height/width for
+        # computation directly. Instead, I need to compute its dimensions by
+        # subtracting gridLayoutSidePanel's dimensions from MainWindow's
+        # dimensions.
+        # So, some maths, albeit simple, is required here.
+
+        widget_width = self.centralwidget.width() - self.width_sidepanel - \
+            self.margin_horizontal
+        widget_height = self.centralwidget.height() - self.margin_vertical
+        newlength_sudokugrid = min(widget_width, widget_height)
+        topleft_x = (widget_width - newlength_sudokugrid) / 2
+        topleft_y = (widget_height - newlength_sudokugrid) / 2
         self.sudokugrid.setGeometry(QtCore.QRect(topleft_x, topleft_y,
                                                  newlength_sudokugrid,
                                                  newlength_sudokugrid))
 
-    def showSolution(self):
-        if self.actionShowSolution.isChecked():
-            print 'Solution ON  [slow]'
-        else:
-            print 'Solution OFF [fast]'
+    def closeEvent(self, event):
+        self.saveSettings()
+        event.accept()
+
+    def saveSettings(self):
+        settings = QtCore.QSettings()
+        settings.setValue('pos', self.pos())
+        settings.setValue('size', self.size())
+        settings.setValue('windowgeometry', self.saveGeometry())
+        settings.setValue('windowstate', self.saveState())
+
+    def restoreSettings(self):
+        screen = QtGui.QDesktopWidget().screenGeometry()
+        settings = QtCore.QSettings()
+        pos = settings.value('pos', QtCore.QPoint(screen.width() / 8.0,
+                             screen.height() / 8.0))
+        size = settings.value('size', QtCore.QSize(0.75 * screen.width(),
+                              0.75 * screen.height()))
+        self.move(pos)
+        self.resize(size)
+        if settings.contains('windowgeometry'):
+            self.restoreGeometry(settings.value('windowgeometry'))
+        if settings.contains('windowstate'):
+            self.restoreState(settings.value('windowstate'))
 
     def viewFullscreen(self):
         """
@@ -88,7 +123,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 
     def helpAbout(self):
         msgBox = QtGui.QMessageBox()
-        msgBox.setIcon(QtGui.QMessageBox.Information)
+        msgBox.setIconPixmap(self.icon.pixmap(48, 48))
         msgBox.setText("<b>Sudoku Solver %s</b>\n" % __version__)
         msgBox.setInformativeText(
             u"A small graphical application for solving any Sudoku puzzle, "
@@ -130,7 +165,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         Overwrite, if any, previously saved puzzle.
         """
         self.savedPuzzle = self.sudokugrid.getPuzzle()
-        print '[Sudoku puzzle Saved]'
+        self.txtbrwSolutionbox.append('[Sudoku puzzle Saved]')
 
     def onRevert(self):
         """
@@ -139,9 +174,9 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         """
         if self.savedPuzzle:
             self.sudokugrid.setPuzzle(self.savedPuzzle)
-            print '[Saved puzzle restored]'
+            self.txtbrwSolutionbox.append('[Saved puzzle restored]')
         else:
-            print '[No puzzle saved yet]'
+            self.txtbrwSolutionbox.append('[No puzzle saved to restore]')
 
     def onClear(self):
         """
@@ -157,17 +192,14 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         """
         # Check if the grid is not empty before proceeding.
         if self.sudokugrid.isGridEmpty():
-            print '[Nothing to solve]'
+            self.txtbrwSolutionbox.append('[Nothing to solve]')
             return
 
-        # I will print the solution if the users wants it. Note, even if user
-        # wants the solution in solutionbox, I will first save it in a file
-        # and then load it to the solution box in one stroke, because this is
-        # faster than printing directly to the solutionbox from logic.
-
-        # Redirect the stdout to a text file 'Solution.txt'
+        # Redirecting the stdout to a text file
+        # This will save the solution to an external file
+        file_name_solutions = 'solution.txt'
         temp = sys.stdout
-        sys.stdout = open('Solution.txt', 'w')
+        sys.stdout = open(file_name_solutions, 'w')
 
         # Record the start time
         t0 = time()
@@ -197,14 +229,15 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 
         # Load the solution from the solution file if user wants.
         if self.actionShowSolution.isChecked():
-            self.txtbrwSolutionbox.setPlainText(open('Solution.txt').read())
+            self.txtbrwSolutionbox.append(open(file_name_solutions).read())
 
         # Record the complete time
         t1 = time()
 
-        print "[%.2f sec.]\n\n" \
-              "[Solution saved in 'Solutions.txt']" \
-              % (t1 - t0)     # print a timestamp in solution box.
+        self.txtbrwSolutionbox.append(
+            "[%.2f sec.]\n\n"
+            "[Solution saved in %s]"
+            % (t1 - t0, file_name_solutions))     # print a timestamp in solution box.
 
         # Miscellaneous checking...
         if not self.sudokugrid.isPuzzleCorrect():

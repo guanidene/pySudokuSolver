@@ -1,4 +1,3 @@
-# logic.py    [Sudoku Solver 1.2]
 # -*- coding: UTF-8 -*-
 
 """This module is the powerhouse of this app! The functions in this module
@@ -17,7 +16,7 @@ Solving a Sudoku puzzle requires two approaches -
        Sometimes, we have to take assumptions over assumptions which makes
        things more complicated.
 
-	To see the steps taken in solving, refer to documentations of the
+    To see the steps taken in solving, refer to documentations of the
         functions Step1 and Stepk
 
 Note: This module is completely independent , ie it does not depends on any
@@ -26,8 +25,8 @@ function/attribute defined in any other modules
 
 """
 
-__author__ = "Pushpak Dagade (पुष्पक दगड़े)"
-__date__   = "$Jul 17, 2011 9:49:42 PM$"
+__author__ = u"पुष्पक दगड़े (Pushpak Dagade)"
+__date__ = "Jul 17, 2011 9:49:42 PM"
 
 # SOLUTION by Sudoku Solver -
 # Providing a good solution is an important aspect of Sudoku Solver.
@@ -36,35 +35,37 @@ __date__   = "$Jul 17, 2011 9:49:42 PM$"
 # to be 25 (which is per line character width of a puzzle printed by the
 # function PrintPuzzle()).
 
-# XXX. This module is not well formatted and does not (at some places) follow
-#      PEP 8, etc. Fix this in the next version
 
 from copy import deepcopy
 
-SudokuPuzzle = [['']*9 for i in xrange(9)]                  # an empty puzzle
-LabelRestrictionsCount = [[[0]*10 for i in xrange(9)] for j in xrange(9)]
-Labels = ('','1','2','3','4','5','6','7','8','9')
+SudokuPuzzle = [[''] * 9 for i in xrange(9)]                # an empty puzzle
+LabelRestrictionsCount = [[[0] * 10 for i in xrange(9)] for j in xrange(9)]
+Labels = ('', '1', '2', '3', '4', '5', '6', '7', '8', '9')
+
 
 def ReadPuzzleFromString(str_puzzle):
-    """Read the puzzle from the string str_puzzle, and store it as
+    """
+    Read the puzzle from the string str_puzzle, and store it as
     a 2D array of characters in the variable SudokuPuzzle.
-    
+
     (Note. str_puzzle will have empty cells represented as '.').
     However, store '.' in str_puzzle as '' (empty character)
     in the array SudokuPuzzle (why to waste space unnecessarily?)
-
     """
-    for i,ch in enumerate(str_puzzle.split()):
-        row = i/9
-        col = i%9
+    for i, ch in enumerate(str_puzzle.split()):
+        row = i / 9
+        col = i % 9
         if ch == '.':
             setSudokuCellLabel(row, col, '')
         else:
             setSudokuCellLabel(row, col, ch)
 
+
 def WritePuzzleToString():
-    """Write the puzzle in the 2D array SudokuPuzzle to the string str_puzzle
-    converting empty cells (ie cells containing '') to '.' in the string."""
+    """
+    Write the puzzle in the 2D array SudokuPuzzle to the string str_puzzle
+    converting empty cells (ie cells containing '') to '.' in the string.
+    """
     str_solution_puzzle = ""
     for row in xrange(9):
         for col in xrange(9):
@@ -76,41 +77,50 @@ def WritePuzzleToString():
 
     return str_solution_puzzle
 
+
 def PrintPuzzle():
-    """Print the puzzle stored in the variable SudokuPuzzle in nice
-    readable format."""
+    """
+    Print the puzzle stored in the variable SudokuPuzzle in nice
+    readable format.
+    """
     # (Performance of this funtion is crucial to the performance of this app.)
     # (Try improving it.)
     sep = "+-------+-------+-------+"
-    print "\n%s" %sep
+    print "\n%s" % sep
     for row in xrange(9):
-        print "|" ,
+        print "|",
         for col in xrange(9):
             if (SudokuPuzzle[row][col] == ''):
-                print "." ,                           # print empty cells as '.'
+                print ".",                           # print empty cells as '.'
             else:
-                print "%s" %SudokuPuzzle[row][col] ,
-            if (col == 2 or col == 5): print "|" ,
+                print "%s" % SudokuPuzzle[row][col],
+            if (col == 2 or col == 5):
+                print "|",
         print "|"
-        if (row == 2 or row == 5): print sep
-    print "%s\n" %sep
+        if (row == 2 or row == 5):
+            print sep
+    print "%s\n" % sep
+
 
 def GetLabelIndex(label):
-    """Search for label in the global constant Labels and return its
-    corresponding index. If not found, return -1."""
+    """
+    Search for label in the global constant Labels and return its
+    corresponding index. If not found, return -1.
+    """
     try:
         return Labels.index(label)
     except ValueError:
-        print "![Trouble] label: '%s' not in global const Labels!" %label
+        print "![Trouble] label: '%s' not in global const Labels!" % label
         return -1
 
+
 def isPuzzleComplete():
-    """Return 1 if puzzle is complete and 0 if not complete.
+    """
+    Return 1 if puzzle is complete and 0 if not complete.
 
     Note: If puzzle is complete then it cannot be incorrect,
     it will definately be correct (thanks to the mechanism
     employed in the setSudokuCellLabel method of this class).
-
     """
     for row in xrange(9):
         for col in xrange(9):
@@ -118,9 +128,11 @@ def isPuzzleComplete():
                 return 0
     return 1
 
+
 def IsCellEmpty(row, col):
     """Return 1 if label is '' (empty string) else return 0."""
     return SudokuPuzzle[row][col] == ''
+
 
 def IsLabelPermissible(row, col, label):
     """Return 1 if value of the key 'label' in the dict
@@ -129,9 +141,10 @@ def IsLabelPermissible(row, col, label):
     Note: If 'label' is not in global constant 'Labels' then this
     won't produce any error, as GetLabelIndex would simply return
     -1. However, GetLabelIndex will give an error for this.
-    
+
     """
     return LabelRestrictionsCount[row][col][GetLabelIndex(label)] == 0
+
 
 def lenLabelsPermissible(row, col):
     """Return the number of permissible labels for the cell in (row,col)
@@ -142,8 +155,10 @@ def lenLabelsPermissible(row, col):
     """
     count = 0
     for i in xrange(10):    # 10 is the length of the constant 'Labels'
-        if LabelRestrictionsCount[row][col][i] == 0: count += 1
+        if LabelRestrictionsCount[row][col][i] == 0:
+            count += 1
     return count
+
 
 def isPuzzleCorrect():
     """Return 0 if puzzle is (definately) incorrect else return 1.
@@ -160,21 +175,26 @@ def isPuzzleCorrect():
     """
     for row in xrange(9):
         for col in xrange(9):
-            if IsCellEmpty(row,col) and (lenLabelsPermissible(row,col)==1):
+            if IsCellEmpty(row, col) and (lenLabelsPermissible(row, col) == 1):
                 return 0
     return 1
 
+
 def GetPermissibleLabels(row, col, n):
-    """Return at the most n permissible labels. Will NOT return '' (empty str)
-    as it will always be permissible for any cell."""
+    """
+    Return at the most n permissible labels. Will NOT return '' (empty str)
+    as it will always be permissible for any cell.
+    """
     count = 0
     labels = []
-    for i in xrange(1,10):     # Start i from 1 so as to skip ''
-        if count>=n: break
+    for i in xrange(1, 10):     # Start i from 1 so as to skip ''
+        if count >= n:
+            break
         if IsLabelPermissible(row, col, Labels[i]):
             labels += Labels[i]
             count += 1
     return labels
+
 
 def setSudokuCellLabel(row, col, label):
     """See the docstring for sudokupanel.SudokuPanel.setSudokuCellLabel"""
@@ -182,76 +202,87 @@ def setSudokuCellLabel(row, col, label):
     global LabelRestrictionsCount
 
     current_label = SudokuPuzzle[row][col]
-    if label == current_label: return 1
+    if label == current_label:
+        return 1
 
-    if LabelRestrictionsCount[row][col][GetLabelIndex(label)] == 0:    
+    if LabelRestrictionsCount[row][col][GetLabelIndex(label)] == 0:
         # for cells in same row (except for itself) -
         for row_ in xrange(9):
             if row_ != row:
                 if current_label != '':
-                    LabelRestrictionsCount[row_][col][GetLabelIndex(current_label)] -= 1
+                    LabelRestrictionsCount[row_][col] \
+                        [GetLabelIndex(current_label)] -= 1
 
                 if label != '':
-                    LabelRestrictionsCount[row_][col][GetLabelIndex(label)] += 1
+                    LabelRestrictionsCount[row_][col] \
+                        [GetLabelIndex(label)] += 1
 
         # for cells in same col (except for itself) -
         for col_ in xrange(9):
             if col_ != col:
                 if current_label != '':
-                    LabelRestrictionsCount[row][col_][GetLabelIndex(current_label)] -= 1
+                    LabelRestrictionsCount[row][col_] \
+                        [GetLabelIndex(current_label)] -= 1
 
                 if label != '':
-                    LabelRestrictionsCount[row][col_][GetLabelIndex(label)] += 1
+                    LabelRestrictionsCount[row][col_] \
+                        [GetLabelIndex(label)] += 1
 
         # for cells in same box (except for itself) -
-        for row_ in (row/3*3, row/3*3+1, row/3*3+2):
-            for col_ in (col/3*3, col/3*3+1, col/3*3+2):
+        for row_ in (row / 3 * 3, row / 3 * 3 + 1, row / 3 * 3 + 2):
+            for col_ in (col / 3 * 3, col / 3 * 3 + 1, col / 3 * 3 + 2):
                 if not ((row_ == row) and (col_ == col)):
                     if current_label != '':
-                        LabelRestrictionsCount[row_][col_][GetLabelIndex(current_label)] -= 1
+                        LabelRestrictionsCount[row_][col_] \
+                            [GetLabelIndex(current_label)] -= 1
 
                     if label != '':
-                        LabelRestrictionsCount[row_][col_][GetLabelIndex(label)] += 1
+                        LabelRestrictionsCount[row_][col_] \
+                            [GetLabelIndex(label)] += 1
 
         SudokuPuzzle[row][col] = label
         return 1
     else:
         print "[Trouble] Failed setting label-\n %s in cell (%d,%d)\n" \
-              %(label, row+1, col+1)
+              % (label, row + 1, col + 1)
         return 0
+
 
 def SavePuzzle():
     """Return a deepcopy of SudokuPuzzle and LabelRestrictionsCount"""
     return deepcopy(SudokuPuzzle), deepcopy(LabelRestrictionsCount)
 
-def LoadPuzzle(_sudokupuzzle, _labelrestrictionscount): # XXX. improve the names.
+
+def LoadPuzzle(_sudokupuzzle, _labelrestrictionscount): # XXX. improve names
     global SudokuPuzzle
     global LabelRestrictionsCount
 
     SudokuPuzzle = deepcopy(_sudokupuzzle)
     LabelRestrictionsCount = deepcopy(_labelrestrictionscount)
 
-#-------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+
 
 def printlong(character):
-    print character*25
+    print character * 25
+
 
 def SolveSudokuPuzzle(str_input_puzzle, MaxAssumptionLevel=4):
-    """Solve the puzzle in the string str_input_puzzle with MaxAssumptionLevel
+    """
+    Solve the puzzle in the string str_input_puzzle with MaxAssumptionLevel
     and return the solution puzzle (as a string).
 
     MaxAssumptionLevel = 3 can solve almost all sudoku puzzles which have a
     solution. But, just to be on a safe side, keep the MaxAssumptionLevel = 4
     (I have not found any puzzle requiring 4 or more levels of assumption
     to solve it.)
-
     """
     ReadPuzzleFromString(str_input_puzzle)
     PrintPuzzle()
 
     printlong('=')
-    print "[Max Assumptions: %d]\n" %MaxAssumptionLevel
-    SolveUptoSteps(MaxAssumptionLevel+1)
+    print "[Max Assumptions: %d]\n" % MaxAssumptionLevel
+    SolveUptoSteps(MaxAssumptionLevel + 1)
     printlong('=')
 
     str_puzzle_solution = WritePuzzleToString()
@@ -262,21 +293,24 @@ def SolveSudokuPuzzle(str_input_puzzle, MaxAssumptionLevel=4):
     # puzzle will already be in these variables, and will create problems.
     global SudokuPuzzle
     global LabelRestrictionsCount
-    SudokuPuzzle = [['']*9 for i in xrange(9)]                # an empty puzzle
-    LabelRestrictionsCount = [[[0]*10 for i in xrange(9)] for j in xrange(9)]
+    SudokuPuzzle = [[''] * 9 for i in xrange(9)]              # an empty puzzle
+    LabelRestrictionsCount = [[[0] * 10 for i in xrange(9)] for j in xrange(9)]
 
     return str_puzzle_solution
 
-def SolveUptoSteps(MaxSteps, tree = []):
+
+def SolveUptoSteps(MaxSteps, tree=[]):
     """Solve from steps 1 to MaxAssumptionLevel (including both)"""
     if MaxSteps == 1:
         Step1()
     else:
         Step1()
 
-        for k in xrange(2, MaxSteps+1):
+        for k in xrange(2, MaxSteps + 1):
             solved = Stepk(k, tree)
-            if solved == 1: break
+            if solved == 1:
+                break
+
 
 def Step1():
     """Try to solve the puzzle "exactly" (as far as possible).
@@ -310,9 +344,10 @@ def Step1():
     The variable data_changed will let know if the puzzle has been solved
     any further in any of the two algorithms. If data_changed is 1 then loop
     will continue to cycle through algorithms 1 and 2, else it will break.
-    
+
     """
-    if isPuzzleComplete(): return
+    if isPuzzleComplete():
+        return
 
     print "Solving exactly..."
     data_changed = 1
@@ -323,37 +358,42 @@ def Step1():
         # 1st algorithm -
         for row in xrange(9):
             for col in xrange(9):
-                if IsCellEmpty(row,col) and lenLabelsPermissible(row,col) == 2:
-                                                 # == 2 becoz 1st element is ''
+                if IsCellEmpty(row, col) and \
+                  lenLabelsPermissible(row, col) == 2:
+                  # == 2 becoz 1st element is ''
 
                     # This part is to avoid the use of GetPermissibleLabels
                     # as it makes the solving process slightly slower.
-                    for i in xrange(1,10):       # skip the first label --> ''
+                    for i in xrange(1, 10):       # skip the first label --> ''
                         if IsLabelPermissible(row, col, Labels[i]):
                             setSudokuCellLabel(row, col, Labels[i])
-                            print "(%d,%d) --> %s" %(row+1, col+1, Labels[i])
+                            print "(%d,%d) --> %s" \
+                                % (row + 1, col + 1, Labels[i])
                             data_changed = 1
                             break
-        
+
         # This might help in improving the time complexity as the
         # 2nd alogrithm is more time complex.
-        if (data_changed == 1): continue
+        if (data_changed == 1):
+            continue
 
         # 2nd algorithm -
         for row in xrange(9):
-            for i in xrange(1,10):  # start from i=1 to skip 1st label --> ''
+            for i in xrange(1, 10):  # start from i=1 to skip 1st label --> ''
                 count = 0
                 for col in xrange(9):
-                    if IsCellEmpty(row,col) and \
-                      IsLabelPermissible(row,col,Labels[i]):
+                    if IsCellEmpty(row, col) and \
+                      IsLabelPermissible(row, col, Labels[i]):
                         count += 1
-                        if count > 1: break
+                        if count > 1:
+                            break
                         temp_row = row
                         temp_col = col
 
                 if count == 1:
                     setSudokuCellLabel(temp_row, temp_col, Labels[i])
-                    print "(%d,%d) --> %s" %(temp_row+1, temp_col+1, Labels[i])
+                    print "(%d,%d) --> %s" \
+                        % (temp_row + 1, temp_col + 1, Labels[i])
                     data_changed = 1
 
         # XXX. 2nd algorithm can be made more efficient by removing from
@@ -361,6 +401,7 @@ def Step1():
         # everywhere.
 
     PrintPuzzle()
+
 
 def Stepk(k, basetree=[]):    # XXX. make sure basetree is passed as expected.
     """Try to solve the puzzle using assumptions.
@@ -388,45 +429,49 @@ def Stepk(k, basetree=[]):    # XXX. make sure basetree is passed as expected.
     # the parameter k is large (say 5 or more) then this function will give
     # one of the many possible solutions.
     # But whichever solution it gives, it will be definately correct!
-    
+
     print "Puzzle complete?"
     if isPuzzleComplete():
         print "> Complete!"
         return 1
     else:
         print "> Not yet!"
-        assumptionleveltree = basetree + [k-1]
+        assumptionleveltree = basetree + [k - 1]
         print "\n(New Assumption Level.\nAssumption Tree: %s\n" \
-              "Saving puzzle...)\n" %assumptionleveltree
+              "Saving puzzle...)\n" % assumptionleveltree
         initialpuzzle, initiallabelrestrictionscount = SavePuzzle()
 
         for row in xrange(9):
             for col in xrange(9):
-                
+
                 # substitute for sudokucellswithonly2possibilities
-                if (not (IsCellEmpty(row,col) and \
-                  (lenLabelsPermissible(row, col)==3) )):
+                if (not (IsCellEmpty(row, col) and
+                  (lenLabelsPermissible(row, col) == 3))):
                     continue # ==3 becoz 1st is a ''
 
                 _labels = GetPermissibleLabels(row, col, 2)
-                for i in (0,1): # iterate through the permissible labels.
+                for i in (0, 1): # iterate through the permissible labels.
 
                     # XXX. improve this
-                    if i == 0: otherlabel = _labels[1]
-                    else: otherlabel = _labels[0]
+                    if i == 0:
+                        otherlabel = _labels[1]
+                    else:
+                        otherlabel = _labels[0]
 
                     print "Assuming %s in cell (%d,%d)\n[Other can be %s]\n" \
-                      %(_labels[i], row+1, col+1, otherlabel)
+                      % (_labels[i], row + 1, col + 1, otherlabel)
                     setSudokuCellLabel(row, col, _labels[i])
 
-                    if k!=2: print "(Entering into nested\nassumption...)\n"
-                    SolveUptoSteps(k-1, assumptionleveltree)
-                    if k!=2: print "(Exiting from nested\nassumption...)\n"
+                    if k != 2:
+                        print "(Entering into nested\nassumption...)\n"
+                    SolveUptoSteps(k - 1, assumptionleveltree)
+                    if k != 2:
+                        print "(Exiting from nested\nassumption...)\n"
 
                     print "Puzzle complete?"
                     if isPuzzleComplete():
-                        # This means that the assumption taken above was correct
-                        # and the puzzle got solved. Hence, return 1.
+                        # This means that the assumption taken above was
+                        # correct and the puzzle got solved. Hence, return 1.
                         print "> Complete!" \
                                # add this later.. (Assumption Level Tree: %s)
                         return 1
@@ -439,7 +484,7 @@ def Stepk(k, basetree=[]):    # XXX. make sure basetree is passed as expected.
                             # incorrect.
                             print "Maybe. Can't say anything\nas of now."\
                                   " Assumption was\n%s in (%d,%d)\n" \
-                                  %(_labels[i], row+1, col+1)
+                                  % (_labels[i], row + 1, col + 1)
 
                             # caching
                             if i == 0:
@@ -456,35 +501,37 @@ def Stepk(k, basetree=[]):    # XXX. make sure basetree is passed as expected.
                                       "Will be useful if other\n" \
                                       "assumption (on same cell)\n"\
                                       "is definitely incorrect.\n"
-                                temppuzzle,templabelrestrictionscount = SavePuzzle()
+                                temppuzzle, templabelrestrictionscount = \
+                                    SavePuzzle()
 
                             # As it cannot be decided standing at this point
-                            # whether the above assumption is correct or incorrect,
-                            # revert to initial conditions and try the other
-                            # options!
+                            # whether the above assumption is correct or
+                            # incorrect, revert to initial conditions and try
+                            # the other options!
                             print "Reverting to this puzzle\n"\
                                   "(saved at the beginning \n"\
                                   "of this assumption) -"
-                            LoadPuzzle(initialpuzzle, initiallabelrestrictionscount)
+                            LoadPuzzle(initialpuzzle,
+                                       initiallabelrestrictionscount)
                             PrintPuzzle()
                         else:
-                            # This means that puzzle is incorrectly filled, so it is
-                            # sure that the above asumption is definately incorrect,
-                            # so the other among the 2 permissible labels is
-                            # definately correct.
+                            # This means that puzzle is incorrectly filled, so
+                            # it is sure that the above asumption is definately
+                            # incorrect, so the other among the 2 permissible
+                            # labels is definately correct.
                             print "Definately incorrect!\n" \
                                   "[%s in cell (%d,%d)]\n" \
-                                  %(_labels[i], row+1, col+1)
+                                  % (_labels[i], row + 1, col + 1)
 
                             # decide whether label is the 1st of the permissible
-                            # labels or the 2nd one.
+                            # the 1st labels or the 2nd one.
                             if i == 1:
-                                # This means that the assumption we took ( 2nd of
-                                # the 2 permissible labels) is incorrect,
-                                # and as this assumption is incorrect, the 1st
-                                # of the 2 assumptions is definately correct.
-                                # Moreover, the puzzle solution to the 1st
-                                # permissible label is already saved in
+                                # This means that the assumption we took
+                                # (2nd of the 2 permissible labels) is
+                                # incorrect, & as this assumption is incorrect,
+                                # the 1st of the 2 assumptions is definately
+                                # correct. Moreover, the puzzle solution to
+                                # the 1st permissible label is already saved in
                                 # temppuzzle, so just load it.
                                 print "Hence previous assumption\n" \
                                       "was correct - \n" \
@@ -493,24 +540,27 @@ def Stepk(k, basetree=[]):    # XXX. make sure basetree is passed as expected.
                                       "solution puzzle. \n" \
                                       "(Good, I had saved it!\n" \
                                       "Saved my time!)" \
-                                      % (otherlabel, row+1, col+1)
+                                      % (otherlabel, row + 1, col + 1)
                                 PrintPuzzle()
-                                LoadPuzzle(temppuzzle, templabelrestrictionscount)
+                                LoadPuzzle(temppuzzle,
+                                           templabelrestrictionscount)
                             else:
                                 print "Hence, defintely correct-\n" \
                                       "[%s in cell (%d,%d)]\n" \
-                                      % (otherlabel, row+1, col+1)
-                                # This means that 2nd of the 2 permiss  ible labels
-                                # is correct, so revert to the puzzle that was
-                                # at the beginning of the outermost for loop and
-                                # then set the 2nd of the 2 permissible labels.
-                                LoadPuzzle(initialpuzzle, initiallabelrestrictionscount)
+                                      % (otherlabel, row + 1, col + 1)
+                                # This means that 2nd of the 2 permissible
+                                # labels is correct, so revert to the puzzle
+                                # that was at the beginning of the outermost
+                                # for loop and then set the 2nd of the
+                                # 2 permissible labels.
+                                LoadPuzzle(initialpuzzle,
+                                           initiallabelrestrictionscount)
                                 setSudokuCellLabel(row, col, _labels[1])
 
-                            # Delete all the variables defined at this point, as
-                            # this function will be going into a recursive loop
-                            # from here on, and this data, unnecessarily, will
-                            # form a stack.
+                            # Delete all the variables defined at this point,
+                            # as this function will be going into a recursive
+                            # loop from here on, and this data, unnecessarily,
+                            # will form a stack.
                             del initialpuzzle
                             del initiallabelrestrictionscount
                             del row
@@ -519,22 +569,25 @@ def Stepk(k, basetree=[]):    # XXX. make sure basetree is passed as expected.
                             del i
                             del otherlabel
 
-                            # Now, the puzzle solution has moved one step ahead,
-                            # so try to solve it further using the "less complex",
-                            # "previous" steps.
-                            if k!=2: print "(Entering into nested\nassumption...)\n"
-                            SolveUptoSteps(k-1, assumptionleveltree)
-                            if k!=2: print "(Exiting from nested\nassumption...)\n"
+                            # Now, the puzzle solution has moved one step
+                            # ahead, so try to solve it further using the
+                            # "less complex", "previous" steps.
+                            if k != 2:
+                                print "(Entering into nested\nassumption...)\n"
+                            SolveUptoSteps(k - 1, assumptionleveltree)
+                            if k != 2:
+                                print "(Exiting from nested\nassumption...)\n"
 
-                            # Finally, repeat this step again to solve the puzzle
-                            # further. (it is quite possile that in the previous
-                            # step itself, the puzzle might have got solved. If so,
-                            # it will just enter this function (in recursion) and
-                            # return from the very 1st check)
+                            # Finally, repeat this step again to solve the
+                            # puzzle further. (it is quite possile that in the
+                            # previous step itself, the puzzle might have got
+                            # solved. If so, it will just enter this function
+                            # (in recursion) and return from the very
+                            # 1st check)
                             return(Stepk(k, basetree))
 
     # If this part is getting executed means this function did not help
     # in solving the puzzle any further.
     print "Didn't get anything from\nthis Assumption Level.\n" \
-          "Assumption Tree: %s\n" %assumptionleveltree
+          "Assumption Tree: %s\n" % assumptionleveltree
     return 0

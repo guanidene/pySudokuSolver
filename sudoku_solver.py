@@ -3,7 +3,7 @@
 
 
 #+=================================================================+
-#|                      Sudoku Solver - 1.x                        |
+#|                      pySudokuSolver 1.3                         |
 #+=================================================================+
 #|                                                                 |
 #|       +-------------------------------------------------+       |
@@ -18,14 +18,16 @@ A small graphical application for solving any Sudoku puzzle, almost
 instantaneously.
 """
 
-# avoid QString class altogether
+# Set appropriate PyQt4 api
 import sip
-sip.setapi("QString", 2)
+sip.setapi('QString', 2)      # avoid PyQt4.QString class altogether
+sip.setapi('QVariant', 2)
+
 from PyQt4 import QtGui
 from mainwindow import MainWindow
 
-__author__ = "पुष्पक दगड़े (Pushpak Dagade)"
-__version__ = '1.x'
+__author__ = u"पुष्पक दगड़े (Pushpak Dagade)"
+__version__ = '1.3'
 
 
 if __name__ == "__main__":

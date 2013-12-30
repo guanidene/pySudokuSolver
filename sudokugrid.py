@@ -1,4 +1,3 @@
-# sudokupanel.py    [Sudoku Solver 1.2]
 # -*- coding: UTF-8 -*-
 
 """
@@ -7,7 +6,7 @@ The method setSudokuCellLabel of the class SudokuGrid is the most
 important (and the most difficult to understand) method of this module.
 """
 
-__author__ = "पुष्पक दगड़े (Pushpak Dagade)"
+__author__ = u"पुष्पक दगड़े (Pushpak Dagade)"
 
 from PyQt4 import QtGui
 from sudokucell import SudokuCell

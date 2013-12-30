@@ -1,11 +1,10 @@
-# sudokucell.py    [Sudoku Solver 1.2]
 # -*- coding: UTF-8 -*-
 
 """This is a very important module contributing to both gui and logic.
 The attribute LabelsRestrictionCount of the class SudkouCell is a very
 important attribute in the working of this app."""
 
-__author__ = "Pushpak Dagade (पुष्पक दगड़े)"
+__author__ = u"पुष्पक दगड़े (Pushpak Dagade)"
 
 import sys
 from PyQt4 import QtGui
