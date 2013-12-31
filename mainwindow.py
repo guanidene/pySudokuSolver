@@ -5,6 +5,7 @@ pySudokuSolver main window of GUI
 """
 
 import sys
+from tempfile import NamedTemporaryFile
 from time import time
 from PyQt4 import QtCore, QtGui
 from logic import SolveSudokuPuzzle
@@ -195,11 +196,11 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             self.txtbrwSolutionbox.append('[Nothing to solve]')
             return
 
-        # Redirecting the stdout to a text file
-        # This will save the solution to an external file
-        file_name_solutions = 'solution.txt'
+        # Redirecting the stdout to a temp. file, to temporarily save
+        # solutions in it.
+        temp_file_solutions = NamedTemporaryFile(mode='w')
         temp = sys.stdout
-        sys.stdout = open(file_name_solutions, 'w')
+        sys.stdout = temp_file_solutions
 
         # Record the start time
         t0 = time()
@@ -214,6 +215,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
                 str_question_puzzle += ". "
 
         # Get solution puzzle for str_question_puzzle
+        # (This is the time consuming operation)
         str_solution_puzzle = SolveSudokuPuzzle(str_question_puzzle)
 
         # Read str_solution_puzzle and fill the grid accordingly.
@@ -228,16 +230,18 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         sys.stdout = temp
 
         # Load the solution from the solution file if user wants.
+        temp_file_solutions.flush()
         if self.actionShowSolution.isChecked():
-            self.txtbrwSolutionbox.append(open(file_name_solutions).read())
+            self.txtbrwSolutionbox.append(
+                open(temp_file_solutions.name).read())
+        temp_file_solutions.close()   # closing deletes the temp. file
 
         # Record the complete time
         t1 = time()
 
         self.txtbrwSolutionbox.append(
             "[%.2f sec.]\n\n"
-            "[Solution saved in %s]"
-            % (t1 - t0, file_name_solutions))     # print a timestamp in solution box.
+            % (t1 - t0))     # print a timestamp in solution box.
 
         # Miscellaneous checking...
         if not self.sudokugrid.isPuzzleCorrect():
