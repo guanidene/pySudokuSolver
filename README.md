@@ -18,15 +18,6 @@ Created and tested using python 2.7 & PyQt4 4.8 on Xubuntu 13.04.
 
 ###Help
 
-Help on how to use the GUI (for v1.2) -
-http://guanidene.blogspot.in/2011/07/sudoku-solver-with-gui-written-in.html
-
-
-Help on how the Sudoku Solver works - 
-http://guanidene.blogspot.in/2011/07/how-to-solve-sudoku-puzzle.html
-
-### Additional Note
-
-I did not use git upto my v1.2, but I am using it now.
-
------------
+* Link to video demonstrating the application - http://www.youtube.com/watch?v=xS9VIbyYNWU
+* How to use the GUI - http://guanidene.blogspot.in/2011/07/sudoku-solver-with-gui-written-in.html
+* How the Sudoku Solver works - http://guanidene.blogspot.in/2011/07/how-to-solve-sudoku-puzzle.html
