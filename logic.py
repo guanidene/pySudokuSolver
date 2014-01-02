@@ -36,6 +36,11 @@ __date__ = "Jul 17, 2011 9:49:42 PM"
 # function PrintPuzzle()).
 
 
+# TODOS:
+# 1. printing directly to stdout is not be the best way. Need to make it
+#    flexible, ie. should allow printing to stdout or a file or txtbrwSolutions
+#    but, without, compromising on the speed (use "timeit" to characterise).
+
 from copy import deepcopy
 
 SudokuPuzzle = [[''] * 9 for i in xrange(9)]                # an empty puzzle

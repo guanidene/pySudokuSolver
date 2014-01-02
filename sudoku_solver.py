@@ -31,8 +31,8 @@ __version__ = '1.3'
 
 
 if __name__ == "__main__":
-    app = QtGui.QApplication(['pySudokuSolver'])
-    app.setOrganizationName('pySudokuSolver')
+    app = QtGui.QApplication(['Sudoku Solver'])
+    app.setOrganizationName('')
     app.setApplicationName('pySudokuSolver')
     widget = MainWindow()
     widget.show()
