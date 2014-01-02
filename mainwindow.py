@@ -7,6 +7,7 @@ pySudokuSolver main window of GUI
 import sys
 from tempfile import NamedTemporaryFile
 from time import time
+from os.path import dirname, join
 from PyQt4 import QtCore, QtGui
 from logic import SolveSudokuPuzzle
 from ui_sudoku_solver import Ui_MainWindow, _fromUtf8
@@ -26,8 +27,9 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 
         # set window icon
         self.icon = QtGui.QIcon()
-        self.icon.addPixmap(QtGui.QPixmap(_fromUtf8("pics/Sudoku Solver.ico")),
-                            QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.icon.addPixmap(QtGui.QPixmap(
+            _fromUtf8(join(dirname(__file__), "icon/ss-256x256.png"))),
+            QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.setWindowIcon(self.icon)
 
         # connect singals to slots
@@ -124,19 +126,21 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 
     def helpAbout(self):
         msgBox = QtGui.QMessageBox()
-        msgBox.setIconPixmap(self.icon.pixmap(48, 48))
+        msgBox.setIconPixmap(self.icon.pixmap(128, 128))
         msgBox.setText("<b>Sudoku Solver %s</b>\n" % __version__)
         msgBox.setInformativeText(
             u"A small graphical application for solving any Sudoku puzzle, "
             u"almost instantaneously.\n\n"
             u"Created by %s \n"
-            u"(Update: December 2013)" % __author__)
+            u"Updated Release: December 2013 \n"
+            u"First Release: July 2011"
+            % __author__)
         msgBox.setStandardButtons(QtGui.QMessageBox.Ok)
         msgBox.exec_()
 
     def helpHowToUse(self):
         msgBox = QtGui.QMessageBox()
-        msgBox.setIcon(QtGui.QMessageBox.Information)
+        msgBox.setIconPixmap(self.icon.pixmap(128, 128))
         msgBox.setText("<b>Sudoku Solver %s</b>\n" % __version__)
         msgBox.setInformativeText(
             "Entering numbers in the grid - \n"
