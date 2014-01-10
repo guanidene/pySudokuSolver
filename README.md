@@ -21,8 +21,3 @@ Created and tested using python 2.7 & PyQt4 4.8 on Xubuntu 13.04.
 * Link to video demonstrating the application - http://www.youtube.com/watch?v=xS9VIbyYNWU
 * How to use the GUI - http://guanidene.blogspot.in/2011/07/sudoku-solver-with-gui-written-in.html
 * How the Sudoku Solver works - http://guanidene.blogspot.in/2011/07/how-to-solve-sudoku-puzzle.html
-<<<<<<< HEAD
-
-
-=======
->>>>>>> master

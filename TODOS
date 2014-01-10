@@ -1,0 +1,9 @@
+Smll TODOS:
+1. In solution, instead of "[Max Assumptions: 4]" need to print "[Max Assumptions Level: 4]" or "[Max Depth of Assumptions: 4]"
+   Verify before proceeding.
+2. From the statustip of the buttons and labels, remove the shortcut information, since shortcuts dont work
+
+Big TODOS:
+1. Do analysis of algorithm complexity in terms of big(O), etc. notation
+2. Present the solution in a GUI form, where user can easily go to any step to see the state of the sudoku
+   (At every step, the sudoku puzzle should be shown in a small grid (GUI), hiughlighting the numbers filled in this step.)
