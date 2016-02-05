@@ -2,6 +2,7 @@ pySudokuSolver
 ==============
 A small graphical application for solving any Sudoku puzzle, almost instantaneously, along with its solution
 
+![sudoku-solver-2](https://f.cloud.github.com/assets/1028181/1834065/c4dd0b92-73d5-11e3-86d6-3f24b541c1e2.png)
 
 ###Running pySudokuSolver
 
